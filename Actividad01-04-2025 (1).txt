@@ -1,0 +1,83 @@
+select * from tienda.factura 
+
+insert into tienda.factura(consecutivo,fecha,documento,cod_empleado)
+values(default,'01/11/2011','9012365478','192092')
+
+insert into tienda.factura(consecutivo,fecha,documento,cod_empleado)
+values(default,'01/11/2012','1017330259','192092'),
+      (default,'01/11/2013','1091440121','192092'),
+	  (default,'01/11/2014','1091646568','192092'),
+	  (default,'01/11/2015','1091678309','192092'),
+	  (default,'01/11/2016','1004864151','192092'),
+	  (default,'01/11/2017','1091675003','192092'),
+	  (default,'01/11/2018','1091678304','192092'),
+	  (default,'01/11/2019','4152637485','192092');
+
+
+select * from tienda.detalle
+where cod_empleado='192092'
+
+select * from tienda.factura 
+
+insert into tienda.detalle(consecutivo,ordinal,cod_articulo,cantidad,descuento,cod_empleado)
+values ('172401','01','1007',1,5,'192092')
+
+insert into tienda.detalle(consecutivo,ordinal,cod_articulo,cantidad,descuento,cod_empleado)
+values ('172545','01','1010',2,5,'192092'),
+       ('172545','02','1025',3,6,'192092');
+	
+insert into tienda.detalle(consecutivo,ordinal,cod_articulo,cantidad,descuento,cod_empleado)
+values ('172546','01','1020',2,5,'192092'),
+       ('172546','02','1022',3,4,'192092'),
+       ('172546','03','1024',5,9,'192092');
+	   
+insert into tienda.detalle(consecutivo,ordinal,cod_articulo,cantidad,descuento,cod_empleado)
+values ('172547','01','1026',1,5,'192092'),
+       ('172547','02','1028',2,4,'192092'),
+	   ('172547','03','1030',3,3,'192092'),
+       ('172547','04','1032',4,9,'192092');
+	   
+insert into tienda.detalle(consecutivo,ordinal,cod_articulo,cantidad,descuento,cod_empleado)
+values ('172548','01','1034',1,5,'192092'),
+       ('172548','02','1036',2,10,'192092'),
+	   ('172548','03','1038',3,2,'192092'),
+	   ('172548','04','1040',4,8,'192092'),
+       ('172548','05','1042',5,2,'192092');
+	 
+insert into tienda.detalle(consecutivo,ordinal,cod_articulo,cantidad,descuento,cod_empleado)
+values ('172549','01','1011',1,10,'192092'),
+       ('172549','02','1013',2,9,'192092'),
+	   ('172549','03','1015',3,8,'192092'),
+	   ('172549','04','1017',4,7,'192092'),
+	   ('172549','05','1019',5,6,'192092'),
+       ('172549','06','1021',6,5,'192092');
+	   
+insert into tienda.detalle(consecutivo,ordinal,cod_articulo,cantidad,descuento,cod_empleado)
+values ('172550','01','1023',1,10,'192092'),
+       ('172550','02','1027',2,9,'192092'),
+	   ('172550','03','1029',3,8,'192092'),
+	   ('172550','04','1031',4,7,'192092'),
+	   ('172550','05','1033',5,6,'192092'),
+	   ('172550','06','1035',6,5,'192092'),
+       ('172550','07','1037',7,4,'192092');
+	   
+insert into tienda.detalle(consecutivo,ordinal,cod_articulo,cantidad,descuento,cod_empleado)
+values ('172551','01','1039',1,10,'192092'),
+       ('172551','02','1041',2,9,'192092'),
+	   ('172551','03','1043',3,8,'192092'),
+	   ('172551','04','1045',4,7,'192092'),
+	   ('172551','05','1047',5,6,'192092'),
+	   ('172551','06','1049',6,5,'192092'),
+	   ('172551','07','1051',7,4,'192092'),
+       ('172551','08','1053',8,3,'192092');
+	 
+insert into tienda.detalle(consecutivo,ordinal,cod_articulo,cantidad,descuento,cod_empleado)
+values ('172552','02','1041',2,9,'192092'),
+	   ('172552','03','1043',3,8,'192092'),
+	   ('172552','04','1045',4,7,'192092'),
+	   ('172552','05','1047',5,6,'192092'),
+	   ('172552','06','1049',6,5,'192092'),
+	   ('172552','07','1051',7,4,'192092'),
+	   ('172552','08','1051',8,3,'192092'),
+       ('172552','09','1053',8,2,'192092');
+	 

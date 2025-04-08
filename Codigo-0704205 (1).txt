@@ -1,0 +1,32 @@
+select * from tienda.factura
+select * from tienda.empleado
+select * from tienda.cliente
+
+---Con reuniones 
+---f y e alias
+---Where una sola vez
+select f.consecutivo,f.fecha,f.total, e.nombre as empleado
+from tienda.factura f, tienda.empleado e
+where f.cod_empleado=e.cod_empleado
+and f.cod_empleado='192092'
+
+
+---con joins
+select f.consecutivo,f.fecha,f.total, e.nombre as empleado
+from tienda.factura f inner join tienda.empleado e
+on f.cod_empleado=e.cod_empleado
+where f.cod_empleado='192092'
+
+---Con natural join
+select f.consecutivo,f.fecha,f.total, e.nombre as empleado
+from tienda.factura f natural join tienda.empleado e
+where f.cod_empleado='192092'
+
+--Con joins, mas el cliente
+select f.consecutivo,f.fecha,f.total, e.nombre as empleado,
+concat(cl.nombre1,' ',cl.nombre2,' ',cl.apellido1,' ',cl.apellido2) as cliente
+from tienda.factura f inner join tienda.empleado e
+on f.cod_empleado=e.cod_empleado
+inner join tienda.cliente cl
+on f.documento=cl.documento
+where f.cod_empleado='192092'
